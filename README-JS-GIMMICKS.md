@@ -7,12 +7,6 @@ imagesloaded.pkgd.min.js → anime.min.js → charming.min.js →
 binary.js → pieces.js → main.js → keyboard.js → bootstrap.offcanvas.js
 ```
 
-Plus a ninth, `app.js`, which is **on disk but never loaded by the page** —
-see the note at the end.
-
-Below is what each one actually does, based on reading the source rather
-than guessing from the filename.
-
 ---
 
 ## The libraries (third-party, unmodified)
@@ -115,26 +109,6 @@ letter in with an increasing per-letter delay (`(i+5) * 30ms`) — so hovering
 a card makes its description materialize left to right, like it's being
 typed out.
 
----
-
-## The file that does nothing: `app.js`
-
-`public/js/app.js` is the default webpack-bundled output from Laravel's
-stock front-end scaffold — you can tell from the webpack bootstrap
-boilerplate at the top of the file. **It's never referenced in
-`layout.blade.php`'s script tags** (only the eight files above are), so it
-just sits in `public/js/` unused. Same story for `public/css/app.css`,
-which is explicitly commented out in the `<head>`. Both are harmless to
-delete if you're cleaning the repo up, since nothing links to them.
-
----
-
-## What changed in this rebuild
-
-- Added `html { scroll-behavior: smooth; }` (with a
-  `prefers-reduced-motion` guard) purely in CSS — no scroll-hijacking JS,
-  so it can't step on any of the animation systems above, which all
-  animate individual elements rather than the page's scroll position.
 - Added `index-en.html`, a faithful English translation with an EN/ES
   toggle in the nav. Only text nodes were translated — every class, `id`,
   `data-*` attribute, and script tag is identical to `index.html`, so all
