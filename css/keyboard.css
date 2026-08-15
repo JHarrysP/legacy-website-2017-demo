@@ -1,0 +1,40 @@
+.middle .item_content {
+	font-family: 'Rajdhani', monospace;
+	color: #999caa;
+}
+
+
+
+ .middle .card-deck .card:hover .item_name
+	 {
+	  color: #95a5a6;
+	
+}
+
+ .middle .card-deck .card:hover h4.item_name
+	 {
+	color: #95a5a6;
+	
+}
+
+ .item {
+	content: '';
+	opacity: 0;
+	background: rgba(90,91,211,0.3);
+	animation: none; /* For Chrome */
+}
+
+
+.middle .card-deck .card:hover .item{
+	animation: blinkblink 0.4s cubic-bezier(0.5,0,1,1) infinite alternate;
+
+}
+
+@keyframes blinkblink {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

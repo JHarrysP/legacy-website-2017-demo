@@ -1,0 +1,82 @@
+.demo-grid {
+
+	--content-font: 'Roboto Mono', monospace;
+}
+
+.content {
+	--pieces-height: 90vh;
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.page-nav {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	font-family: 'Roboto Mono', monospace;
+	color: #e04643;
+}
+
+.page-nav--open{
+	display: flex;
+}
+.hover{
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	top:25%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+}
+
+.hover--open{
+	display: none;
+}
+
+.content .tiles {
+	height: var(--pieces-height);
+	width: calc(var(--pieces-height) * calc(1000/1000));
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: calc(-1 * var(--pieces-height) * calc(1000/1000) / 2);
+	margin-top: calc(-1 * var(--pieces-height) / 2);
+	pointer-events: none;
+}
+
+.tiles {
+	display: flex;
+	flex-wrap: wrap;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+@media screen and (max-width: 40em) {
+	.content {
+		--pieces-height: 50vh;
+		height: var(--pieces-height);
+		margin-bottom: 8em;
+	}
+	.content__title {
+		font-size: 22vw;
+	}
+	.page-nav__item {
+		font-size: 6vh;
+	}
+}

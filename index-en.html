@@ -1,0 +1,1542 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Krewbit</title>
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Jura:400,500,600|Michroma|Rajdhani:400,500,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Roboto+Mono" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+ <!--        <link rel="stylesheet" href="css/app.css"> -->
+        <link rel="stylesheet" href="css/nucleo-icons.css">
+        <link rel="stylesheet" href="css/demo.css">       
+        <link rel="stylesheet" href="css/shatter.css">
+        <link rel="stylesheet" href="css/keyboard.css">
+        <link rel="stylesheet" href="css/bootstrap.offcanvas.css">
+        <script>document.documentElement.className = 'js';</script>
+
+        <!-- Smooth scrolling for the in-page anchor links (#top, #services, #contact).
+             CSS-only: no scroll-hijacking JS, so it can't collide with pieces.js /
+             anime.js / GlitchFx, which animate elements, not the page scroll position.
+             scroll-margin-top keeps anchored sections from landing under the fixed navbar. -->
+        <style>
+          html { scroll-behavior: smooth; }
+          #top, #services, #contact { scroll-margin-top: 70px; }
+        </style>
+    </head>
+<body data-spy="scroll" data-target=".navbar">
+
+
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark justify-content-end">
+<a class="navbar-brand" href="#"></a>
+<button type="button" class="navbar-toggler offcanvas-toggle" data-toggle="offcanvas" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="navbar-offcanvas  navbar-offcanvas-touch " id="navbarNavAltMarkup">
+  <div class="navbar-nav ">
+    <p><a class="nav-item nav-link active" href="#top">#Top<span class="sr-only">(current)</span></a></p>
+    <p><a class="nav-link" href="#">·</a></p>
+    <p><a class="nav-item nav-link hold" href="#services">#Services</a></p>
+    <p><a class="nav-link" href="#">·</a></p>
+    <p><a class="nav-item nav-link" href="#contact">#Contact</a></p>
+    <p><a class="nav-link" href="#">·</a></p>
+    <p><a class="nav-item nav-link" href="index.html" style="font-size:.75rem;letter-spacing:.05em;">ES</a></p>
+  </div>
+</div>
+</nav>
+
+
+
+
+<style>
+@media (min-width: 50em){
+
+
+.navbar {
+    
+    background-color: #000;
+    color: #ecf0f1;
+    font-weight: lighter;
+    font-family: 'Jura', sans-serif;
+    font-size: .8rem;
+  }
+
+  .navbar-nav .nav-link {
+
+  color: rgba(255,255,255,.5);
+  background-color: transparent;
+  border-bottom: .15rem solid transparent;
+   margin-left: .5rem;
+  }
+
+  .navbar-nav .nav-item:hover,
+  .navbar-nav .nav-item:focus {
+  border-bottom-color: rgba(255,255,255,.25);
+  }
+
+  .navbar-nav .active {
+  color: #ff3366;
+  border-bottom-color: #ff3366;
+  }
+
+/*   p a {
+  	 animation: text-flicker 20s linear infinite;
+  	 
+
+  }*/
+
+
+ .active{
+  	 animation: letter-flicker 10s linear infinite;
+
+  }
+  
+  .hold{
+  	animation: letter-flicker 25s linear infinite;
+  }
+
+  a{
+
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+
+ }
+ 
+@keyframes text-flicker {
+  0% {
+    opacity:0.1;
+    text-shadow: 0px 0px 0px rgba(236, 240, 241,.5);
+  }
+  
+  2% {
+    opacity:1;
+    text-shadow: 0px 0px 0px rgba(236, 240, 241,.5);
+  }
+  8% {
+    opacity:0.1;
+    text-shadow: 0px 0px 0px rgba(236, 240, 241,.5);
+  }
+  9% {
+    opacity:1;
+    text-shadow: 0px 0px 0px rgba(236, 240, 241,.5);
+  }
+  12% {
+    opacity:0.1;
+    text-shadow: 0px 0px 0px rgba(236, 240, 241,.5);
+  }
+  20% {
+    opacity:1;
+    text-shadow: 0px 0px 0px rgba(236, 240, 241,.5)
+  }
+  25% {
+    opacity:0.3;
+    text-shadow: 0px 0px 0px rgba(236, 240, 241,.5)
+  }
+  30% {
+    opacity:1;
+    text-shadow: 0px 0px 0px rgba(236, 240, 241,.5)
+  }
+  
+  70% {
+    opacity:0.7;
+    text-shadow: 0px 0px 0px rgba(236, 240, 241,.5)
+  }
+  
+  72% {
+    opacity:0.2;
+    text-shadow:0px 0px 0px rgba(236, 240, 241,.5)
+  }
+  
+  77% {
+    opacity:.9;
+    text-shadow: 0px 0px 0px rgba(236, 240, 241,.5)
+  }
+  100% {
+    opacity:.9;
+    text-shadow: 0px 0px 0px rgba(236, 240, 241,.5)
+  }
+}
+
+@keyframes active-flicker {
+  0% {
+    opacity:0.1;
+    text-shadow: 0px 0px 0px #ff3366;;
+  }
+  
+  2% {
+    opacity:1;
+    text-shadow: 0px 0px 0px #ff3366;;
+  }
+  8% {
+    opacity:0.1;
+    text-shadow: 0px 0px 0px #ff3366;;
+  }
+  9% {
+    opacity:1;
+    text-shadow: 0px 0px 0px #ff3366;;
+  }
+  12% {
+    opacity:0.1;
+    text-shadow: 0px 0px 0px #ff3366;;
+  }
+  20% {
+    opacity:1;
+    text-shadow: 0px 0px 0px #ff3366;
+  }
+  25% {
+    opacity:0.3;
+    text-shadow: 0px 0px 0px #ff3366;
+  }
+  30% {
+    opacity:1;
+    text-shadow: 0px 0px 0px #ff3366;
+  }
+  
+  70% {
+    opacity:0.7;
+    text-shadow: 0px 0px 0px #ff3366;
+  }
+  
+  72% {
+    opacity:0.2;
+    text-shadow:0px 0px 0px #ff3366;
+  }
+  
+  77% {
+    opacity:.9;
+    text-shadow: 0px 0px 0px #ff3366;
+  }
+  100% {
+    opacity:.9;
+    text-shadow: 0px 0px 0px #ff3366;
+  }
+}
+
+@keyframes anchor-flicker {
+  0% {
+    opacity:0.1;
+    text-shadow: 0px 0px 0px #ff3366;
+  }
+  2% {
+    opacity:0.1;
+    text-shadow: 0px 0px 0px #ff3366;
+  }
+  4% {
+    opacity:1;
+    text-shadow: 0px 0px 0px #ff3366;
+  }
+  
+  
+  19% {
+    opacity:1;
+    text-shadow: 0px 0px 0px #ff3366;
+  }
+  21% {
+    opacity:0.1;
+    text-shadow: 0px 0px 0px #ff3366;
+  }
+  23% {
+    opacity:1;
+    text-shadow: 0px 0px 0px #ff3366;
+  }
+  
+  80% {
+    opacity:1;
+    text-shadow: 0px 0px 0px #ff3366;
+  }
+  83% {
+    opacity:0.4;
+    text-shadow: 0px 0px 0px #ff3366;
+  }
+  87% {
+    opacity:1;
+    text-shadow: 0px 0px 0px #ff3366;
+  }
+}
+
+@keyframes letter-flicker {
+  0% {
+    opacity:0.1;
+    text-shadow: 0px 0px 0px rgba(52, 152, 219,.5);
+  }
+  2% {
+    opacity:0.1;
+    text-shadow: 0px 0px 0px rgba(52, 152, 219,.5);
+  }
+  4% {
+    opacity:1;
+    text-shadow: 0px 0px 0px rgba(52, 152, 219,.5);
+  }
+  
+  
+  19% {
+    opacity:1;
+    text-shadow: 0px 0px 0px rgba(52, 152, 219,.5);
+  }
+  21% {
+    opacity:0.1;
+    text-shadow: 0px 0px 0px rgba(52, 152, 219,.5);
+  }
+  23% {
+    opacity:1;
+    text-shadow: 0px 0px 0px rgba(52, 152, 219,.5);
+  }
+  
+  80% {
+    opacity:1;
+    text-shadow: 0px 0px 0px rgba(52, 152, 219,.5);
+  }
+  83% {
+    opacity:0.4;
+    text-shadow: 0px 0px 0px rgba(52, 152, 219,.5);
+  }
+  87% {
+    opacity:1;
+    text-shadow: 0px 0px 0px rgba(52, 152, 219,.5);
+  }
+}
+}
+@media (max-width: 50em) {
+	   .navbar-offcanvas{
+
+   	background-color: rgba(0,0,0,.7);
+   	color: #ff3366;
+   	font-weight: lighter;
+   	font-family: 'Jura', sans-serif;
+   	font-size: .8rem;
+    overflow:hidden;
+
+   }
+   .navbar-dark .navbar-nav .nav-link.active{
+    color:  #ff3366;
+   }
+
+  .navbar-dark .navbar-nav .nav-link {
+
+  color: rgba(7, 153, 146,1.0);
+
+ 
+  
+  }	
+
+	
+}
+</style>
+
+<div id="home" class="mobile-header d-flex justify-content-center h-100 d-none d-xs-block d-md-none d-lg-none">
+	
+		<div class="row align-items-center w-100">
+			
+				<div class="col-xs-12 mx-5">
+					     <h2 class="title justify-content-center" style="color: #95a5a6;">
+			              <span class="title__inner mode mode--design" data-glitch data-switch>Digital-Engineering<span><i class="nc-icon nc-minimal-left" style="font-size: .6em; color: #ff3366;"></i></span></span>
+			            </h2>
+			
+					<img class="img-fluid" src="/img/brandheader.png" alt="logo" >
+					    <div class="link-wrap justify-content-center"  style="color: #95a5a6; text-transform: uppercase; font-size: .8em;">
+			              <a class="contact-link ">Design with us</a>
+			            </div>
+			            <div class="justify-content-center text-center">
+			            	<span><i class="nc-icon nc-minimal-down" style="font-size: 1em; color: #ff3366;"></i></span>
+			            </div>
+					</div>
+		</div>
+		
+	
+</div>
+
+
+<style>
+	.mobile-header {
+  font-family:'Jura', sans-serif;
+
+}
+
+	
+</style>
+<div id="top" class="header d-none d-md-block d-lg-block d-xs-none">
+<svg class="hidden">
+      <symbol id="icon-menu" viewBox="0 0 24 24">
+ 
+        <path d="M23.8,6H0.1V3h23.7C23.8,3,23.8,6,23.8,6z M23.8,10.5H0.1v3h23.7C23.8,13.5,23.8,10.5,23.8,10.5z M24,18H10v3h14V18z"/>
+      </symbol>
+      <symbol id="icon-menu-alt" viewBox="0 0 24 24">
+
+        <path d="M10.4,6H0V3h10.4C10.4,3,10.4,6,10.4,6z M10.4,10.5H0v3h10.4C10.4,13.5,10.4,10.5,10.4,10.5z M15.1,18H9v3h6.1V18z M23.4,6H13V3h10.4C23.4,3,23.4,6,23.4,6z M23.4,10.5H13v3h10.4C23.4,13.5,23.4,10.5,23.4,10.5z M23.5,18h-6.1v3h6.1V18z"/>
+      </symbol>
+    </svg>
+    <main >
+      <div class="pieces"></div>
+      <!-- <div class="pieces" style="background-image: url(/img/brandheader.jpg)" data-img-alt="url(/img/alt.jpg)" data-img-code="url(/img/bin.jpg)"></div> -->
+      <div class="overlay overlay--hidden"></div>
+      <div class="content">
+        <div class="content__inner">
+          <div class="content__top">
+
+            <h2 class="title">
+              <span class="title__inner mode mode--design mt-5" data-switch data-glitch>digital-engineering<span><i class="nc-icon nc-minimal-left d-inline px-5 " style="font-size: .6em; color: #ff3366;"></i></span></span>
+            </h2>
+            <div class="controls mt-5" style="z-index: 2;">
+              <button class="btn btn--menu mode mode--design" data-switch>
+                <svg class="icon icon--menu"><use xlink:href="#icon-menu"></use></svg>
+                <svg class="icon icon--menu-alt"><use xlink:href="#icon-menu-alt"></use></svg>
+              </button>
+            </div>
+          </div>
+          <nav class="page-nav">
+            <div class="container">
+             <div class="row justify-content-center">
+               <div class="col-md-6">
+            <div class="pb-2 dummy--code">
+              <p>HTMLElement.prototype.center = function(){</p>
+              <p>var  w = document.documentElement.clientWidth,</p>  
+              <p class="pl-4">&nbsp;h = document.documentElement.clientHeight;</p>
+              <p>this.style.position = 'absolute';</p>
+              <p>this.style.left = (w - this.offsetWidth)/2 + 'px';</p>
+              <p>this.style.top = (h - this.offsetHeight)/2 + window.pageYOffset + 'px';}</p>
+              <p>var img = new Image(),</p>
+              <p>body = document.getElementsByTagName("body")[0];</p>
+              <p>img.src = "/img/krewbit-logo.png";</p>
+              <p>img.onload = function(){</p>
+              <p class="pl-4">this.center();}</p>
+              <p>body.appendChild(img);</p>      
+           </div>
+               </div>
+             </div>
+          </div>
+          </nav>
+<div class="hover"></div>
+       <div class="tiles" style="background-image: url(/img/brandheader.png)"></div>
+          <div class="menu" style="font-family: 'Roboto Mono', monospace; font-size: 1em; text-transform: lowercase; color:#585656" >
+            <ul class="menu__inner">
+              <li class="menu__item" data-switch data-glitch><a class="menu__link" data-switch>Interface Design</a></li>
+              <li class="menu__item"><a class="menu__link" data-switch>E-commerce</a></li>
+              <li class="menu__item active"><a class="menu__link" data-switch>Dynamic Apps</a></li>
+              <!-- <li class="menu__item" data-switch data-glitch><a class="menu__link" data-switch>Inspiraciones</a></li> -->
+            </ul>
+          </div>
+          <div class="menu menu--code" style="display: none;">
+            <ul class="menu__inner">
+              <li class="menu__item"><a class="menu__link" data-switch>On Coding</a></li>
+              <li class="menu__item"><a class="menu__link" data-switch>DBA: Data Base Admin</a></li>
+              <li class="menu__item"><a class="menu__link" data-switch>SysAdmin</a></li>
+              <li class="menu__item"><a class="menu__link" data-switch>Onboarding</a></li>
+            </ul>
+          </div>
+          <div class="content__bottom">
+            <div class="switch mode mode--design">
+              <a id="close" class="switch__item switch__item--current">Design</a>
+              <a id="open" class="switch__item"><span class="mode mode--design active" data-switch data-glitch>Programming</span><strong class="d-inline pl-1 bar-code">█</strong></a>
+            </div>
+            <div class="link-wrap">
+              <a class="contact-link mode mode--design" data-switch data-glitch>Work with us</a>
+            </div>
+          </div>
+      <div class="container" style="z-index: 2; color: #bdc3c7;">
+        <div class="text-center pb-2">
+          <p class="mb-0" >To make yourself known and expand your horizons, you need a presence on the <strong style="color: #3498db;">Web</strong>.</p>
+          <footer class="blockquote-footer mode mode--design" ><cite title="Source Title">Krewbit</cite></footer>
+        </div>
+    </div>
+        </div><!-- /content__inner-->
+
+      </div><!-- /content -->
+
+      <div class="loading"></div>
+    </main>
+
+</div>
+
+
+<style>
+  html,body {
+  height: 100%;
+  }
+
+
+.header {
+  height: 100%;
+  width: 100%;
+
+  font-family:'Jura', sans-serif;
+  font-size: .9rem;
+}
+
+ .bar-code{
+     animation: text-flicker 1s ease infinite;
+
+
+  }
+
+
+</style>
+
+
+    
+<nav class="navbar navbar-light" style="background-color: #0f1114;">
+    
+</nav>
+
+<div class="jumbotron text-center mb-0">
+  <h1 class="display-5">FIRST IMPRESSIONS LAST</h1>
+  <p class="lead">Your <em style="color: #2f3542;font-weight: 600;" >Digital Identity</em> lets you be recognized, and your website <br> drives your reach into the market.</p>
+ <div class="row">
+ <div class="col-md-3"></div>
+ 	 <div class="offset-md-5 col-md-6 mt-1">
+  	<hr style="border: #747d8c solid 1px ;">
+  </div>
+ 
+ </div>
+  <div class="my-4"></div>
+  <p class="sub-header">Build your company's portal with us</p>
+<div class="row justify-content-center">
+	  <div class="col-md-2">
+  	 <p  class="lead mb-0">
+<button class="btn-lg btn-header"><a href="#" style="text-decoration: none;">· Build your site ·</a></button>
+  </p>
+  </div>
+</div>
+ 
+</div>
+<div id="services" ></div>
+<style>
+	.jumbotron{
+		
+		  background:linear-gradient(-45deg, rgba(236,240,241,.5) 0%,rgba(189,195,199,1) 50%,rgba(127,140,141,1) 100%),url(img/bg.jpg);
+		  background-size:contain;
+		  background-repeat: no-repeat;
+		  background-position: right;
+		  color: #747d8c;
+	      border-radius: 0;
+
+		font-family: 'Jura',sans-serif;
+		font-weight: 600;
+		border:none;
+
+	}
+	.jumbotron h1{
+		color:#2980b9;
+	}
+	.sub-header{
+		font-family: 'Jura',sans-serif;
+		color: #747d8c;
+		 text-transform: uppercase;
+	}
+	
+	.btn-header{
+	
+		background: rgb(69,72,77);
+		background: -moz-linear-gradient(top, rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%);
+		background: -webkit-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
+		background: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
+ 	    text-transform: uppercase;
+ 	    font-size: .7em;
+ 	    font-weight: bolder;
+		/*border: solid 1px #fff;*/
+ 	    width: 100%;
+ 	    font-family: 'Rajdhani',sans-serif;
+	}
+
+	.btn-header:hover{
+		text-decoration: none;
+		/*border: solid 1px #ff3366;
+		color: #ff3366;
+*/
+
+	}
+	.btn-header:hover  a{
+	color: #ff3366;
+	}
+	@media (max-width: 49em) {
+
+.jumbotron{
+		font-size:14px;
+		background:linear-gradient(-45deg, rgba(236,240,241,.5) 0%,rgba(189,195,199,1) 50%,rgba(127,140,141,1) 100%);
+		background-size:contain;
+		background-repeat: no-repeat;
+		background-position: right;
+		color: #747d8c;
+		border-radius: 0;
+	    font-family: 'Jura',sans-serif;
+	    font-weight: 600;
+	    border:none;
+
+  }
+  .jumbotron .lead{
+		font-size:16px;
+	
+	}
+
+  	.jumbotron h1{
+		font-size:22px;
+		color:#2980b9;
+	}
+
+	}
+
+</style>
+
+<nav class="navbar navbar-light" style="background-color: #0f1114;">
+    
+</nav>
+
+<div class="container middle mt-5 mb-0">
+    <div class="d-flex justify-content-center">
+      <div class="card text-center">
+        <div class="card-header pb-1" >
+          · What do we offer? ·
+        </div>
+        <div class="card-body">
+          <h2 class="card-title pb-3" style="text-transform: uppercase; color: #3498db;">Digital Identity</h2>
+          <span ><i class="nc-icon nc-minimal-down d-inline px-3 " style="font-size: .6em; color: #ff3366;"></i></span>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+      
+ <div class="wrapper">
+        
+
+  <div class="container middle pt-0 mb-0">
+    <p class="card-text text-center pt-5" >· Advantages &amp; Benefits ·</p>
+    <div class="d-flex justify-content-center">
+      <div class="card text-center" style="border:none;">
+        <div class="card-body">
+          <!-- cards -->
+
+       
+          <div class="card-deck pt-2">
+            <div class="card pt-5 pb-4">
+              <span ><i class="nc-icon square x3 nc-spaceship" style="color: rgba(41, 128, 185,1);"></i></span>
+              <div class="card-body">
+                <span class="d-inline"><strong class="d-inline pr-3 pt-2 item"></strong></span>&nbsp;<h4 class="card-title d-inline item_name mr-3" style="font-weight: bold;">Reach</h4>
+                <p class="card-text item_content" data-glitch>Your company's image on the web sparks curiosity and instant impact, making people want to know more.</p>
+                <p class="card-text"><small class="text-muted profit">You claim a place in the customer's mind</small></p>
+              </div>
+            </div>
+            <div class="card pt-5 pb-4">
+              <span><i class="nc-icon square x3 nc-tag-content" style="color: rgba(41, 128, 185,1);"></i></span>
+              <div class="card-body">
+                <span class="d-inline"><strong class="d-inline pr-3 pt-2 item"></strong></span>&nbsp;<h4 class="card-title d-inline item_name mr-3" style="font-weight: bold;">Positioning</h4>
+                <p class="card-text item_content" data-glitch>Your digital identity creates new trends so customers feel connected and stay loyal to your brand.</p>
+                <p class="card-text"><small class="text-muted profit">You set your company apart from the competition</small></p>
+              </div>
+            </div>
+            <div class="card pt-5 pb-4">
+              <span><i class="nc-icon square x3 nc-money-coins" style="color: rgba(41, 128, 185,1);"></i></span>
+              <div class="card-body">
+                <span class="d-inline"><strong class="d-inline pr-3 pt-2 item"></strong></span>&nbsp;<h4 class="card-title d-inline item_name mr-3" style="font-weight: bold;">Productivity</h4>
+                <p class="card-text item_content" data-glitch>Customers are willing to pay a brand premium, since your digital identity signals superior quality</p>
+                <p class="card-text"><small class="text-muted profit">You earn higher revenue</small></p>
+              </div>
+            </div>
+          </div>
+          <!-- cards end -->
+       
+      </div>
+    </div>
+  </div>
+</div>
+<div class="text-center mt-5 mb-4 quote">
+       <p class="mb-0 active">Your website promotes you <strong style="color: #3498db;">24/7</strong>.</p>
+          <footer class="blockquote-footer"><cite title="Source Title">Krewbit</cite></footer>
+</div>
+</div>
+ 
+
+
+<style>
+
+  .wrapper{
+     background: linear-gradient(to bottom, #4a69bd 50%, #000 50%);
+  }
+
+  .middle{
+    color: #ecf0f1;
+    font-family: 'Rajdhani',sans-serif;
+   
+
+  }
+	.nc-icon{
+		color: #95a5a6;
+	}
+	.middle .card{
+		background-color: transparent;
+  -webkit-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
+  -moz-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
+  -o-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
+  -ms-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
+  transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
+		
+		
+	}
+	
+	.middle .card-deck .card{
+    border:none;
+    background: rgb(69,72,77);
+    background: -moz-linear-gradient(top, rgba(69,72,77,1) 0%, rgba(0,0,0,1) 70%);
+    background: -webkit-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 70%);
+    background: linear-gradient(to bottom,rgba(69,72,77,1) 0%, rgba(0,0,0,1)  70%);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
+   box-shadow: 10px 10px 1px rgba(0,0,0,1) ;
+	}
+
+
+
+
+	.middle .card-title {
+    text-transform: uppercase;
+    
+  }
+
+	.middle .card h4 {
+		color: rgba(41, 128, 185,1);
+    font-family: 'Jura', sans-serif;
+	}
+
+	.middle .text-muted.profit {
+		color:#ff3366 !important;
+    font-weight: bold;
+	}
+  
+ .quote{
+     
+     font-family: 'Jura', sans-serif;
+     font-size: .9rem;
+     color: #c3c3c3;
+     
+  }
+
+.middle .card-deck .card:hover{
+  
+  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+
+}
+
+@media (max-width: 49em) {
+
+   .wrapper{
+     background: #000;
+  }
+
+  .middle .card-deck .card{
+    background: rgb(69,72,77);
+    background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(69,72,77,.3) 70%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(69,72,77,.3) 70%);
+    background: linear-gradient(to bottom,rgba(0,0,0,1) 0%, rgba(69,72,77,.3)  70%);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
+  }
+
+
+  .middle .card {
+    font-size:14px;
+    -o-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+  }
+
+  .middle .card-deck .card:first-child{
+    
+    border-bottom-left-radius:0; 
+    border-bottom-right-radius:0;
+
+  }
+
+    .middle .card-deck .card:last-child {
+
+    border-top-left-radius:0; 
+    border-top-right-radius:0;
+    background: rgb(69,72,77);
+    background: -moz-linear-gradient(top, rgba(69,72,77,.3) 0%, rgba(0,0,0,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(69,72,77,.3) 0%,rgba(0,0,0,1) 100%);
+    background: linear-gradient(to bottom, rgba(69,72,77,.3) 0%,rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
+
+  }
+
+    .middle .card-deck .card:not(:first-child):not(:last-child){
+      
+      border-radius:0; 
+      border-bottom-color: transparent;
+      border-top-color: transparent;
+      background: rgba(69,72,77,.3);
+   
+  }
+  .middle .card h2 {
+    font-size:22px;
+
+	}
+
+	.middle .card h4 {
+    font-size:16px;
+		color: rgba(41, 128, 185,1);
+    font-family: 'Jura', sans-serif;
+	}
+
+
+
+
+
+  
+}
+
+</style>
+<div class="d-none d-md-block d-lg-block d-xs-none" >
+<div class="container bottom pt-0">
+<div class="d-flex justify-content-center">
+<div class="row">
+
+       <div class="card text-center">
+        <div class="card-body mb-0">
+          <h2 class="card-title  pb-3" style=" text-transform: uppercase; color: #3498db;">Image Development</h2>
+          <span><i class="nc-icon nc-minimal-down d-inline px-3 " style="font-size: .6em; color: #ff3366;"></i></span>
+        </div> 
+      </div>
+
+
+</div>
+</div>
+</div>
+
+
+<div class="services-wrapper-top">
+<div class="container bottom pb-5 pt-1 ">      
+<div class="row mt-5 justify-content-center">
+<div class="col-md-12 text-center">
+     <div class="binary mt-0 mb-5" data-glitch>
+                  <h4 class="card-title">· design ·</h4>
+                  <h4 class="card-title">101010101</h4>
+                  <h4 class="card-title">· design ·</h4>
+</div> 
+<div class="card-deck">
+     
+        <div class="card card-services text-center">
+          <div class="card-header" >(Mockup)</div>
+        <div class="card-body mt-5">
+            <h4 class="card-title">Merging Proposals</h4>
+            <p class="card-description">
+              Your image needs to go beyond a logo — we help you find the graphic harmony you need...
+          </p>
+          <span style="font-size: 2.5em;"><i class="nc-icon square-light nc-layout-11 pt-3 active"></i></span>
+          <p class="mt-4"  style="font-size: .9rem; color: #ff3366;">
+           Every aspect of your page should feel like part of a whole. We define the proportions, colors, and fonts of every element.
+          </p>
+       
+   </div>
+   <div class="card-footer ">
+    "Brand authenticity is the key to success"
+    </div>
+    </div>
+  
+  <br>
+        <div class="card card-services text-center">
+          <div class="card-header" >(UI/UX)</div>
+        <div class="card-body mt-5">
+            <h4 class="card-title" data-glitch>Digital Image</h4>
+            <p class="card-description">
+             A proper, fluid user interface is essential to capture attention...
+         </p>
+         <span style="font-size: 2.5em;"><i class="nc-icon square-light nc-tile-56"></i></span>
+         <p class="pt-4"  style="font-size: .9rem; color: #ff3366;">
+            We craft the right user experience so your page makes the impression you want on the customers you're after.
+        </p>
+
+        
+    </div>
+    <div class="card-footer " style="border:none;">
+        "Your business card to the public online"
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<hr class="my-0"  style="border:solid 0.5px #fff;">
+
+<div class="services-wrapper-bot">
+<div class="container bottom pt-1">   
+    
+<div class="row mt-5 justify-content-center">
+  <div class="col-md-12 text-center">
+     <div class="binary mt-0 mb-5" data-glitch>
+                  <h4 class="card-title">· Programming ·</h4>
+                  <h4 class="card-title">101010101</h4>
+                  <h4 class="card-title">· Coding ·</h4>
+</div>   
+<div class="card-deck">
+          <div class="card card-services text-center">
+          <div class="card-header" >(SEO)</div>
+        <div class="card-body mt-5">
+            <h4 class="card-title" data-glitch>Presence on the Web</h4>
+ <p class="card-description">
+                           Easy access to information over the web makes having a Digital Identity essential...
+                        </p>
+                         <span style="font-size: 2.5em;"><i class="nc-icon square-light nc-globe pt-3"></i></span>
+                        <p class="pt-4"  style="font-size: .9rem; color: #ff3366;">
+                            Our work isn't just about creating a good image — we also focus on making your website easy to find.
+                        </p>
+
+      
+   </div>
+   <div class="card-footer ">
+    "Having a space on the web is essential"
+    </div>
+    </div>
+
+    <br>
+            <div class="card card-services text-center">
+          <div class="card-header" >Updates & Migration (Framework & Database)</div>
+        <div class="card-body mt-5">
+            <h4 class="card-title">Latest Trends</h4>
+ <p class="card-description">
+                           The web keeps evolving, and with it the languages, styles, and technologies in use...
+
+                        </p>
+                        
+                          <span style="font-size: 2.5em;"><i class="nc-icon square-light nc-settings pt-3 active"></i></span>
+                        <p  class="pt-4" style="font-size: .9rem; color: #ff3366;">
+                            Keeping your site current in code and design keeps the interface up to date, making it easier to access and use.
+                        </p>
+
+       
+   </div>
+
+   <div class="card-footer ">
+    "Design without functionality is like a car without an engine"
+    </div>
+    </div>
+
+</div>
+  </div>
+</div>
+
+  <br><br>
+
+
+</div></div>
+</div>
+
+
+
+<style>
+
+  .services-wrapper-top{
+    background:linear-gradient(-45deg, rgba(74, 105, 189,1.0) 0%,rgba(74, 105, 189,1.0) 65%,rgba(74, 105, 189,.5) 100%),url(img/bg.jpg);
+		  background-size:contain;
+		  background-repeat: no-repeat;
+		  background-position: left;
+  }
+
+   .services-wrapper-bot{
+    background:linear-gradient(-45deg, rgba(74, 105, 189,.5) 0%,rgba(74, 105, 189,1.0) 35%,rgba(74, 105, 189,1.0) 100%),url(img/bg.jpg);
+		  background-size:contain;
+		  background-repeat: no-repeat;
+		  background-position: right;
+  }
+
+  .bottom{
+    color: #ecf0f1;
+    font-family: 'Rajdhani',sans-serif;
+
+  }
+
+  .nc-icon{
+    color:#6a89cc;
+  }
+
+    .bottom .card{
+
+       background-color: transparent;
+       border:none;
+      -webkit-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
+      -moz-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
+      -o-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
+      -ms-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
+      transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
+        
+        
+    }
+    .bottom .card.card-services .card-header{
+      border-bottom-color:#212529;
+      background-color: #6a89cc; 
+      border-radius: 5px;
+    }
+    
+    .bottom .card.card-img{
+     border:none;
+     border-radius: 0;
+        
+    }
+
+    .bottom .card.card-services .card-body{
+          border-radius: 5px ;
+          border-right: solid 1px #212529;
+          background: rgb(69,72,77);
+          background: -moz-linear-gradient(top, rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%);
+          background: -webkit-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
+          background: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
+    }
+
+
+
+    .bottom .card-body p{
+        color: #c3c3c3;
+    }
+    
+    .bottom .card-title {
+      color: #3498db;
+    } 
+
+    .bottom .card h4 {
+        color: #6a89cc;
+    font-family: 'Jura', sans-serif;
+    }
+    
+    .bottom .card-footer{
+        color: #ecf0f1;
+        border:none;
+        background-color:transparent;
+    }
+    .bottom .{
+        color: #ecf0f1;
+       font-family: 'Jura', sans-serif; 
+       font-weight: bolder;
+    }
+
+  .bottom .quote{
+     
+     font-family: 'Jura', sans-serif;
+     font-size: .9rem;
+     color: #c3c3c3;
+     
+  }
+
+
+</style>
+
+<div class="d-xs-block d-md-none d-lg-none">
+<div class="container bottom pt-0">
+<div class="d-flex justify-content-center">
+<div class="row">
+
+       <div class="card text-center">
+        <div class="card-body mb-0">
+
+          <h2 class="card-title pb-3" style=" text-transform: uppercase; color: #3498db;">Image Development</h2>
+
+
+          <span><i class="nc-icon nc-minimal-down d-inline px-3 " style="font-size: .6em; color: #ff3366;"></i></span>
+        </div> 
+      </div>
+
+
+</div>
+</div>
+</div>
+
+
+<div class="services-wrapper-top">
+<div class="container bottom pb-5 pt-1 ">      
+<div class="row mt-5 justify-content-center">
+<div class="col-md-12 text-center">
+
+<div class=" mt-0 mb-5" data-glitch><h5 class="card-title">· Design ·</h5></div> 
+
+<div class="card-deck">
+     
+        <div class="card card-services text-center">
+          <div class="card-header" >(Mockup)</div>
+        <div class="card-body">
+            <h5 class="card-title">Merging Proposals</h5>
+            <p class="card-description">
+              Your image needs to go beyond a logo — we help you find the graphic harmony you need...
+          </p>
+          <span style="font-size: 2.5em;"><i class="nc-icon square-light nc-layout-11 pt-3 active"></i></span>
+          <p class="mt-4"  style="font-size: .9rem; color: #ff3366;">
+           Every aspect of your page should feel like part of a whole. We define the proportions, colors, and fonts of every element.
+          </p>
+       
+   </div>
+   <div class="card-footer ">
+    "Brand authenticity is the key to success"
+    </div>
+    </div>
+  
+  <br>
+        <div class="card card-services text-center">
+          <div class="card-header" >(UI/UX)</div>
+        <div class="card-body">
+            <h5 class="card-title" data-glitch>Digital Image</h5>
+            <p class="card-description">
+             A proper, fluid user interface is essential to capture attention...
+         </p>
+         <span style="font-size: 2.5em;"><i class="nc-icon square-light nc-tile-56"></i></span>
+         <p class="pt-4"  style="font-size: .9rem; color: #ff3366;">
+            We craft the right user experience so your page makes the impression you want on the customers you're after.
+        </p>
+
+        
+    </div>
+    <div class="card-footer " style="border:none;">
+        "Your business card to the public online"
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<hr class="my-0"  style="border:solid 0.5px #fff;">
+
+<div class="services-wrapper-bot">
+<div class="container bottom pt-1">   
+    
+<div class="row mt-5 justify-content-center">
+<div class="col-md-12 text-center">
+
+<div class=" mt-0 mb-5" data-glitch><h5 class="card-title">· Programming ·</h5></div>  
+
+<div class="card-deck">
+          <div class="card card-services text-center">
+          <div class="card-header" >(SEO)</div>
+        <div class="card-body">
+            <h5 class="card-title" data-glitch>Presence on the Web</h5>
+ <p class="card-description">
+                           Easy access to information over the web makes having a Digital Identity essential...
+                        </p>
+                         <span style="font-size: 2.5em;"><i class="nc-icon square-light nc-globe pt-3"></i></span>
+                        <p class="pt-4"  style="font-size: .9rem; color: #ff3366;">
+                            Our work isn't just about creating a good image — we also focus on making your website easy to find.
+                        </p>
+
+      
+   </div>
+   <div class="card-footer ">
+    "Having a space on the web is essential"
+    </div>
+    </div>
+
+    <br>
+            <div class="card card-services text-center">
+          <div class="card-header" >Updates & Migration (Framework & Database)</div>
+        <div class="card-body">
+            <h5 class="card-title">Latest Trends</h5>
+ <p class="card-description">
+                           The web keeps evolving, and with it the languages, styles, and technologies in use...
+
+                        </p>
+                        
+                          <span style="font-size: 2.5em;"><i class="nc-icon square-light nc-settings pt-3 active"></i></span>
+                        <p  class="pt-4" style="font-size: .9rem; color: #ff3366;">
+                            Keeping your site current in code and design keeps the interface up to date, making it easier to access and use.
+                        </p>
+
+       
+   </div>
+
+   <div class="card-footer ">
+    "A design without functionality is a car without an engine"
+    </div>
+    </div>
+
+</div>
+  </div>
+</div>
+
+  <br><br>
+
+
+</div></div>
+</div>
+
+
+<style>
+
+@media (max-width: 49em) {
+  .services-wrapper-top{
+    background:linear-gradient(-45deg, rgba(74, 105, 189,1.0) 0%,rgba(74, 105, 189,1.0) 65%,rgba(74, 105, 189,.5) 100%),url(img/bg.jpg);
+		  background-size:contain;
+		  background-repeat: no-repeat;
+		  background-position: left;
+  }
+
+   .services-wrapper-bot{
+    background:linear-gradient(-45deg, rgba(74, 105, 189,.5) 0%,rgba(74, 105, 189,1.0) 35%,rgba(74, 105, 189,1.0) 100%),url(img/bg.jpg);
+		  background-size:contain;
+		  background-repeat: no-repeat;
+		  background-position: right;
+  }
+
+  .bottom{
+    font-size:14px;
+    color: #ecf0f1;
+    font-family: 'Rajdhani',sans-serif;
+
+  }
+
+  .nc-icon{
+    color:#6a89cc;
+  }
+
+    .bottom .card{
+
+       background-color: transparent;
+       border:none;
+      -webkit-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
+      -moz-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
+      -o-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
+      -ms-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
+      transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
+        
+        
+    }
+    .bottom .card.card-services .card-header{
+      border-bottom-color:#212529;
+      background-color: #6a89cc; 
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    
+    .bottom .card.card-img{
+     border:none;
+     border-radius: 0;
+        
+    }
+
+    .bottom .card.card-services .card-body{
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+          border-right: solid 1px #212529;
+          background: rgb(69,72,77);
+          background: -moz-linear-gradient(top, rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%);
+          background: -webkit-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
+          background: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
+    }
+
+
+
+    .bottom .card-body p{
+        color: #c3c3c3;
+    }
+    
+    .bottom .card-title {
+      color: #3498db;
+    } 
+
+    .bottom .card h5 {
+        color: #6a89cc;
+    font-family: 'Jura', sans-serif;
+    }
+    .bottom .card h2 {
+    font-size:22px;
+
+	}
+    .bottom .card-footer{
+        color: #ecf0f1;
+        border:none;
+        background-color:transparent;
+    }
+    .bottom .{
+        color: #ecf0f1;
+       font-family: 'Jura', sans-serif; 
+       font-weight: bolder;
+    }
+
+  .bottom .quote{
+     
+     font-family: 'Jura', sans-serif;
+     font-size: .9rem;
+     color: #c3c3c3;
+     
+  }
+}
+
+</style>
+
+
+    
+<nav class="navbar navbar-light" style="background-color: #0f1114;">
+    
+</nav>
+
+<footer id="contact">
+	<div class="d-flex h-100 justify-content-center text-center mx-auto">
+		<div class="row w-100 align-items-center">
+			<div class="col-md-4 ">
+				<h6 class="d-inline">#mail</h6><span><i class="nc-icon nc-minimal-right d-inline px-3 " style="font-size: .6em; color: #ff3366;"></i></span><p class="d-inline">info@krewbit.com <strong class="d-inline bar">█</strong></p>
+			</div>
+
+
+			<div class="col-md-4 ">
+				<a  class ="mx-auto" href="#top" style="text-decoration: none; color: #2980b9;"><h6 class="d-inline">#back to top</h6><span><i class="nc-icon nc-minimal-up d-inline px-3 " style="font-size: .6em; color: #ff3366;"></i></span></a>
+
+
+			</div>
+
+			<div class="col-md-4">
+				<img src="/img/brandfoot.png" alt="">
+				<p class="pl-5 my-1">#digital enginnering<span><i class="nc-icon nc-minimal-left d-inline px-3 " style="font-size: .6em; color: #ff3366;"></i></span></p>
+				
+			</div>
+		</div>
+	</div>	
+
+	<div class="row w-100 justify-content-center text-center mx-auto align-items-end">
+
+			<p class="company">©2015-2018 Ingenieria Kinetic, C.A</p>
+	</div>
+</footer>
+
+<style>
+	
+footer{
+	height: 100%;
+	font-family: 'Jura',sans-serif;
+	color: #ecf0f1;
+
+}
+
+
+ .bar{
+  	 animation: text-flicker 5s ease infinite;
+
+
+  }
+
+ p.company{
+  	font-family: 'Michroma',sans-serif;
+  	font-size: 0.7em;
+  	color: #c3c3c3;
+  	
+  	
+  }
+</style>
+
+
+
+  </body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+<script src="js/anime.min.js" type="text/javascript"></script>
+<script src="js/charming.min.js" type="text/javascript"></script>
+<script src="js/binary.js" type="text/javascript"></script>
+<script src="js/pieces.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+<script src="js/keyboard.js" type="text/javascript"></script>
+<script src="js/bootstrap.offcanvas.js" type="text/javascript"></script>
+
+
+
+<script>
+        {
+        
+
+            const piecesEl = document.querySelector('.content .tiles');
+            const piecesObj = new Pieces(piecesEl, {
+                 pieces: {rows: 14, columns: 12}
+            });
+            const menuEl = document.querySelector('.page-nav');
+            const optionsCtrl = document.querySelector('#open');
+            const closeOptionsCtrl = document.querySelector('#close');
+            const hoverItem = document.querySelector('.dummy--code');
+            const hoverTrigger = document.querySelector('.hover');
+
+            const showOptions = () => {
+              
+                menuEl.classList.add('page-nav--open');
+                hoverTrigger.classList.add('hover--open');
+
+                piecesObj.animate({
+                    duration: 3000,
+                    delay: (t,i) => {
+                        const elBounds = piecesEl.getBoundingClientRect();
+                        const x1 = elBounds.left + elBounds.width/2;
+                        const y1 = elBounds.top + elBounds.height/2;
+                        const tBounds = t.getBoundingClientRect();
+                        const x2 = tBounds.left + tBounds.width/2;
+                        const y2 = tBounds.top + tBounds.height/2;
+                        const dist = Math.sqrt(Math.pow(x2-x1,2) + Math.pow(y2-y1,2));
+                        const maxDist = Math.sqrt(Math.pow(elBounds.left-x1,2) + Math.pow(elBounds.top-y1,2));
+                        const maxDelay = 300;
+
+                        t.dataset.centerx = x2;
+                        t.dataset.centery = y2;
+
+                        return -1*maxDelay/maxDist*dist + maxDelay;
+                    },
+                    easing: [0.1,1,0,1],
+                    translateX: (t,i) => { 
+                        return t.dataset.column < piecesObj.getTotalColumns()/2 ? anime.random(-400,0) : anime.random(0,400);
+                    },
+                    translateY: (t,i) => { 
+                        return t.dataset.row < piecesObj.getTotalRows()/2 ? anime.random(-400,0) : anime.random(0,400);
+                    },
+                    opacity: 0.2
+                });
+                
+                anime.remove(optionsCtrl);
+                anime({
+                    targets: optionsCtrl,
+                    duration: 700,
+                    easing: 'easeOutExpo',
+                    scale: 1.2,
+                    opacity: 0
+                });
+
+                anime.remove(menuEl);
+                anime({
+                    targets: menuEl,
+                    duration: 700,
+                    delay: 150,
+                    easing: 'easeOutExpo',
+                    scale: [0,1],
+                    opacity: 1
+                });
+            };
+
+            const hideOptions = (ev) => {
+                ev.preventDefault();
+                menuEl.classList.remove('page-nav--open');
+                 hoverTrigger.classList.remove('hover--open');
+
+                piecesObj.animate({
+                    duration: 600,
+                    delay: (t,i) => {
+                        const elBounds = piecesEl.getBoundingClientRect();
+                        const x1 = elBounds.left + elBounds.width/2;
+                        const y1 = elBounds.top + elBounds.height/2;
+                        const x2 = t.dataset.centerx;
+                        const y2 = t.dataset.centery;
+                        const dist = Math.sqrt(Math.pow(x2-x1,2) + Math.pow(y2-y1,2));
+                        const maxDist = Math.sqrt(Math.pow(elBounds.left-x1,2) + Math.pow(elBounds.top-y1,2));
+                        const maxDelay = 800;
+
+                        return maxDelay/maxDist*dist;
+                    },
+                    easing: [0.1,1,0,1],
+                    translateX: 0,
+                    translateY: 0,
+                    opacity: 1
+                });
+                
+                anime.remove(optionsCtrl);
+                anime({
+                    targets: optionsCtrl,
+                    duration: 700,
+                    delay: 200,
+                    easing: 'easeOutQuint',
+                    scale: [1.1,1],
+                    opacity: 1
+                });
+
+                anime.remove(menuEl);
+                anime({
+                    targets: menuEl,
+                    duration: 700,
+                    easing: 'easeOutQuint',
+                    scale: 0.8,
+                    opacity: 0
+                });
+            };
+
+            const randomizeTilts = (ev) => {
+                ev.preventDefault();
+               
+
+             
+                piecesObj.animate({
+                    duration: 3000,
+                    delay: (t,i) => {
+                        const elBounds = piecesEl.getBoundingClientRect();
+                        const x1 = elBounds.left + elBounds.width/2;
+                        const y1 = elBounds.top + elBounds.height/2;
+                        const tBounds = t.getBoundingClientRect();
+                        const x2 = tBounds.left + tBounds.width/2;
+                        const y2 = tBounds.top + tBounds.height/2;
+                        const dist = Math.sqrt(Math.pow(x2-x1,2) + Math.pow(y2-y1,2));
+                        const maxDist = Math.sqrt(Math.pow(elBounds.left-x1,2) + Math.pow(elBounds.top-y1,2));
+                        const maxDelay = 300;
+
+                        t.dataset.centerx = x2;
+                        t.dataset.centery = y2;
+
+                        return -1*maxDelay/maxDist*dist + maxDelay;
+                    },
+                    easing: [0.1,1,0,1],
+                    translateX: (t,i) => { 
+                        return t.dataset.column < piecesObj.getTotalColumns()/2 ? anime.random(-400,0) : anime.random(0,400);
+                    },
+                    translateY: (t,i) => { 
+                        return t.dataset.row < piecesObj.getTotalRows()/2 ? anime.random(-400,0) : anime.random(0,400);
+                    },
+                    opacity: 0.2
+                });
+
+        
+            };
+                        const rearrangeTiles = (ev) => {
+                ev.preventDefault();
+             
+
+                piecesObj.animate({
+                    duration: 600,
+                    delay: (t,i) => {
+                        const elBounds = piecesEl.getBoundingClientRect();
+                        const x1 = elBounds.left + elBounds.width/2;
+                        const y1 = elBounds.top + elBounds.height/2;
+                        const x2 = t.dataset.centerx;
+                        const y2 = t.dataset.centery;
+                        const dist = Math.sqrt(Math.pow(x2-x1,2) + Math.pow(y2-y1,2));
+                        const maxDist = Math.sqrt(Math.pow(elBounds.left-x1,2) + Math.pow(elBounds.top-y1,2));
+                        const maxDelay = 800;
+
+                        return maxDelay/maxDist*dist;
+                    },
+                    easing: [0.1,1,0,1],
+                    translateX: 0,
+                    translateY: 0,
+                    opacity: 1
+                });
+            };
+
+            optionsCtrl.addEventListener('click', showOptions);
+            closeOptionsCtrl.addEventListener('click', hideOptions);
+            hoverItem.addEventListener('mouseenter', randomizeTilts);
+            // hoverTrigger.addEventListener('mouseenter', randomizeTilts);
+            // hoverTrigger.addEventListener('mouseleave', rearrangeTiles);
+        }
+        </script>
+</html>
